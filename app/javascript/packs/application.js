@@ -16,3 +16,29 @@ import 'bootstrap';
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+
+// auto text
+
+let textType = document.querySelector('.typeing')
+let textArray = textType.dataset.typeingtext.split("")
+let typeCount = 0;
+
+let autoTypeText = () => {
+    if(typeCount < textType.dataset.typeingtext.length){
+        textType.innerHTML += textType.dataset.typeingtext.charAt(typeCount)
+        typeCount++
+        textArray = textType.dataset.typeingtext.split("")
+    }else {
+        textArray.pop()
+        textType.innerHTML = textArray.join("")
+        if(textArray.length == 0){
+            typeCount = 0
+        }
+    }  
+}
+setInterval(() => {
+    autoTypeText()
+},150)
+
+console.log("hello world")

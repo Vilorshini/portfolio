@@ -1,10 +1,119 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Poppins:300,400,500,700");
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 // Specific CSS for your home-page
-h1 {
-    color: aqua;
+
+body{
+    background-color: #031321;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+    position: relative;
+    z-index: 10;
 }
+
+
 
 #avatar{
     width: 150px;
     border-radius: 50%;
     margin-top: 20px;
+}
+
+//writing
+h1 {
+    margin-top: 30px;
+    color: #575F7D;
+    font-family: 'Pacifico', cursive;
+    font-size: 60px;
+}
+
+p {
+    font-family: 'Pacifico', cursive;
+    color: #575F7D;
+    font-size: 30px;
+    font-weight: thin;
+    margin-bottom: 80px;
+    align-items: center;
+}
+
+p a {
+    font-family: 'Pacifico', cursive;
+    color: #575F7D;
+    font-size: 30px;
+    font-weight: thin;
+    margin-bottom: 40px;
+}  
+
+
+.the-type {
+    width: 80%;
+    margin: 0 auto;
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    display: inline;
+    background: #0e6e1d;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+    text-transform: capitalize;
+    border-right-style: solid;
+    border-width: 8px;
+    border-image: linear-gradient(
+        45deg,
+        rgb(14, 110, 29),
+        rgb(14, 110, 29),
+        rgb(14, 110, 29)
+      )
+      1;
+  }
+  
+
+//about button
+.custom-button:hover{
+    text-decoration:none;
+    color: #272838;
+    background-color:#fff;
+/*   border-radius:4px; */
+}
+.custom-button{
+    text-decoration: none;
+    color: #ffffff;
+    border: 3px solid #ffffff;
+    margin-top: 30px;
+    padding: 1em 2rem;
+    font-size:20px;
+    position:relative;
+    transition: all .5s
+}
+.custom-button::before,
+.custom-button::after{
+    content:"";
+    position:absolute;
+    width:3rem;
+    height:3rem;
+    border-style: solid;
+    border-color: #fff;
+    transition: all .5s
+}
+.custom-button::before{
+    top: -1.7rem;
+    left:-1.7rem;
+    border-width: 3px 0 0 3px;
+}
+.custom-button::after{
+    bottom:-1.5rem;
+    right:-1.5rem;
+    border-width: 0px 3px 3px 0px;
+}
+
+.custom-button:hover::before,
+.custom-button:hover::after{
+    width:calc(100% + 3rem);
+    height:calc(100% + 3rem);
+    border-color:#fff;
 }
