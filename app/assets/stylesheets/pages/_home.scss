@@ -1,32 +1,44 @@
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Poppins:300,400,500,700");
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap');
 // Specific CSS for your home-page
 
 body{
     background-color: #031321;
-    justify-content: center;
-    text-align: center;
-    padding-top: 80px;
+    
+    height: 2000px;
     position: relative;
     z-index: 10;
 }
 
-
+.profile-content {
+    justify-content: center;
+    text-align: center;
+}
 
 #avatar{
     width: 150px;
     border-radius: 50%;
     margin-top: 20px;
+    
+    
 }
+
 
 //writing
 h1 {
+    padding-top: 80px;
     margin-top: 30px;
     color: #575F7D;
     font-family: 'Pacifico', cursive;
     font-size: 60px;
+    
+}
+
+img{
+    justify-content: center;
+    text-align: center;
 }
 
 p {
@@ -36,6 +48,8 @@ p {
     font-weight: thin;
     margin-bottom: 80px;
     align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 p a {
@@ -44,7 +58,14 @@ p a {
     font-size: 30px;
     font-weight: thin;
     margin-bottom: 40px;
+    text-decoration: none;
+    
 }  
+
+a:hover{
+    color: black;
+    text-decoration: none;
+}
 
 
 .the-type {
@@ -78,6 +99,7 @@ p a {
     text-decoration:none;
     color: #272838;
     background-color:#fff;
+    
 /*   border-radius:4px; */
 }
 .custom-button{
@@ -88,7 +110,11 @@ p a {
     padding: 1em 2rem;
     font-size:20px;
     position:relative;
-    transition: all .5s
+    transition: all .5s;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    
 }
 .custom-button::before,
 .custom-button::after{
@@ -101,7 +127,7 @@ p a {
     transition: all .5s
 }
 .custom-button::before{
-    top: -1.7rem;
+    top: -1.5rem;
     left:-1.7rem;
     border-width: 3px 0 0 3px;
 }
@@ -117,3 +143,266 @@ p a {
     height:calc(100% + 3rem);
     border-color:#fff;
 }
+
+
+// menu
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 40px;
+  left: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: rgb(214, 214, 214);
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  top:0px;
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 0px 0px 20px 0px;
+  padding-top: 30px;
+  border-radius: 20px;
+  
+  
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+  columns: 300px 2;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+  
+}
+
+
+.devicer {
+    width: 20em;
+    display: block;
+    height: 5px;
+    
+    background-color: #4b4b4d;
+    margin: 60px auto 0;
+    float: right;
+    
+    
+  }
+
+
+.a {
+  color: #fff;
+  position: relative;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: 'Lato', sans-serif;
+  float: right;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: #575F7D;
+    z-index: -1;
+    transform: skew(-10deg);
+
+    top: -0.5em;
+    left: -0.5em;
+    width: 0;
+    height: calc(100% + 1em);
+    
+    transition: width 250ms;
+  }
+  
+  &:hover {
+    &::before {
+      width: calc(100% + 1em);
+      transition: width 250ms;
+    }
+  }
+}
+
+.a:hover{
+    color: black;
+    text-decoration: none;
+}
+
+//div project container
+
+#content{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+
+// moving line background
+.moving-lines {
+    stroke-dasharray: 4000;
+    stroke-dashoffset: 4000;
+    animation: dash 20s linear forwards;
+
+    
+  }
+  
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  #BGline {
+    position: absolute;
+    z-index: -5;
+    opacity: 0.8;
+    top: -200px;
+  }
+  
+  .display {
+
+    justify-content:space-between;
+    align-items: center;
+    display: flex;
+    
+  }
+
+  .movingline {
+    stroke-dasharray: 4000;
+    stroke-dashoffset: 4000;
+    animation: dash 20s linear forwards;
+    position: relative;
+    z-index: -10;
+    
+  }
+  
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  #BGline {
+    position: absolute;
+    z-index: -5;
+    opacity: 0.8;
+    top: -200px;
+  }
+  
+ 
