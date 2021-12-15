@@ -3,11 +3,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap');
 // Specific CSS for your home-page
-
+#myline{
+  color: #00121b;
+}
 body{
     background-color: #031321;
     
-    height: 2000px;
+    
     position: relative;
     z-index: 10;
     align-items: center;
@@ -414,7 +416,7 @@ a{
   .movingline {
     stroke-dasharray: 4000;
     stroke-dashoffset: 4000;
-    animation: dash 20s linear forwards;
+    animation: dash 40s linear backwards;
     position: relative;
     z-index: -10;
     
@@ -433,4 +435,47 @@ a{
     top: -200px;
   }
   
- 
+  .footer {
+    align-items: center;
+    justify-content: center;
+   
+    font-size: 30px;
+    font-weight: bold;
+    background-color:#0c293a ;
+    
+  }
+footer p{
+    margin-top: 255px;
+
+}
+  .social-media i:hover {
+	transform: scale(1.5);
+}
+
+.social-media i {
+	height: 25px;
+	width: 25px;
+	margin: 20px 10px;
+	padding: 4px;
+	color: #fff;
+	transition: 0.5s;
+}
+
+.social-media {
+	width: 100%;
+	color: #fff;
+	text-align: center;
+	font-size: 40px;
+}
+
+.social-media a {
+	text-decoration: none;
+}
+
+.footer-bottom {
+	padding: 10px;
+	background: #00121b;
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+}

@@ -1,0 +1,42 @@
+/* footer css*/
+.footer {
+      text-align: center;
+      background: black;
+      display: flex;
+      justify-content: space-between;
+      padding: 50px;
+      color: rgba(0,0,0,0.3);
+      height: 2.0rem;
+      width: 100%;
+      position:fixed;
+      bottom:0;
+    }
+    
+    .footer-links {
+      justify-content: space-evenly;
+      display: flex;
+      align-items: center;
+      padding-left: 40%;
+    }
+    
+    .footer-links a {
+      color: #fdfdfd;
+      opacity: 15;
+      text-decoration: none;
+      font-size: 30px;
+      padding: 0px 10px;
+      transition: all 200ms ease-in-out;
+      opacity: .7;
+    }
+    
+    .footer-links a:hover {
+      color: #01b6c9;
+      opacity: 1;
+    }
+    
+    .footer-copyright{
+      color: white;
+      font-size: 10px;
+      position: relative;
+    }
+    
